@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+</head>
+<body>
+    <h1>Items</h1>
+    <ul>
+        {{range .}}
+        <li>{{.ID}}: {{.Name}}</li>
+        {{end}}
+    </ul>
+
+    <h2>Add New Item</h2>
+    <form action="/add" method="post">
+        <input type="text" name="name" placeholder="Enter item name" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
+
